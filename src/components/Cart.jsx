@@ -13,7 +13,7 @@ export function Cart() {
         </label>
         <input id={ cartCheckboxId } type="checkbox" hidden />
  
-        <aside>
+        <aside className="cart">
             <ul>
                 <li>
                     <img src="https://cdn.dummyjson.com/product-images/1/thumbnail.jpg" alt="iPhone" />

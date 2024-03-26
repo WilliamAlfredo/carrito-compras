@@ -6,6 +6,7 @@ import { FiltersProvider } from './context/filters.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <FiltersProvider>
     <App />
   </FiltersProvider>,

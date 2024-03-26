@@ -7,16 +7,16 @@ export function Products({ products }) {
   const { addToCart, cart, removeFromCart } = useCart();
 
   //método para checar si el producto está en el cart
-  const checkProductInCart = (product) => {
-    return cart.some((item) => item.id === product.id);
-  };
+  //const checkProductInCart = (product) => {
+    //return cart.some((item) => item.id === product.id);
+  //};
 
   return (
     <main className="products">
       <ul>
         {products.slice(0, 12).map((product) => {
 
-          const isProductInCart = checkProductInCart(product);//esto puede ser true o false
+          //const isProductInCart = checkProductInCart(product);//esto puede ser true o false
 
           return (
             <li key={product.id}>
@@ -27,13 +27,8 @@ export function Products({ products }) {
                 </strong>
               </div>
               <div>
-                <button style={{ backgroundColor: isProductInCart ? 'red' : 'dark' }} 
-                onClick={() => { isProductInCart ? removeFromCart(product) : addToCart(product) }}>
-                  {
-                    isProductInCart 
-                    ? <RemoveFromCartIcon /> 
-                    : <AddToCartIcon />
-                  }
+                <button onClick={ () => addToCart(product)}>
+                  <AddToCartIcon/>
                 </button>
               </div>
             </li>
